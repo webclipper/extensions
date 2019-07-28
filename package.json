@@ -4,5 +4,12 @@
   "main": "index.js",
   "repository": "git@github.com:webclipper/extensions.git",
   "author": "DiamondYuan <admin@diamondyuan.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jquery": "^3.3.30",
+    "@web-clipper/area-selector": "^0.0.12",
+    "@web-clipper/highlight": "^0.0.12",
+    "@web-clipper/turndown": "^0.0.12"
+  }
 }
