@@ -23,3 +23,110 @@ export interface ContentScriptContext {
   document: Document;
   QRCode: any;
 }
+
+export interface Message {
+  info(content: string): void;
+}
+
+export interface UploadImageRequest {
+  data: string;
+}
+
+export interface ImageHostingService {
+  getId(): string;
+
+  uploadImage(request: UploadImageRequest): Promise<string>;
+
+  uploadImageUrl(url: string): Promise<string>;
+}
+
+export interface ToolContext<T, Out> {
+  result: T;
+  data: Out;
+  message: Message;
+  imageService: ImageHostingService;
+  loadImage: any;
+  captureVisibleTab: any;
+}
+
+export interface IExtensionLifeCycle<T, U> {
+  /**
+   * 插件被加载之前
+   */
+  init?(context: InitContext): boolean;
+
+  /**
+   * 执行插件
+   */
+  run?(context: ContentScriptContext): Promise<T> | T;
+
+  /**
+   * 执行插件后
+   */
+  afterRun?(context: ToolContext<T, U>): Promise<U> | U;
+
+  /**
+   * 清理环境
+   */
+  destroy?(context: ContentScriptContext): void;
+}
+
+export interface IExtensionManifest {
+  /**
+   * 扩展名名
+   */
+  readonly name: string;
+  /**
+   * 版本号 a.b.c
+   */
+  readonly version: string;
+  /**
+   * 描述
+   */
+  readonly description?: string;
+  /**
+   * 图标地址
+   */
+  readonly icon?: string;
+  /**
+   * 匹配的网址列表，如果为空，则匹配全部网站。
+   */
+  readonly matches?: string[];
+  /**
+   * 关键字
+   */
+  readonly keywords?: string[];
+
+  readonly i18nManifest?: {
+    [key: string]: {
+      readonly name?: string;
+      readonly description?: string;
+      readonly icon?: string;
+      readonly keywords?: string;
+    };
+  };
+}
+
+export const enum ExtensionType {
+  Text = 'Text',
+  Image = 'Image',
+  Tool = 'tool',
+}
+
+export interface SerializedExtension {
+  type: ExtensionType;
+  manifest: IExtensionManifest;
+  init?: string;
+  run?: string;
+  afterRun?: string;
+  destroy?: string;
+}
+
+export interface SerializeAble {
+  serialize: () => SerializedExtension;
+}
+
+export interface SerializedExtensionWithId extends SerializedExtension {
+  id: string;
+  router: string;
+}

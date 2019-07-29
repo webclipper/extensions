@@ -5,6 +5,13 @@
   "repository": "git@github.com:webclipper/extensions.git",
   "author": "DiamondYuan <admin@diamondyuan.com>",
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts,.tsx --ignore-pattern bad.* ."
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
   "dependencies": {
     "@diamondyuan/eslint-config-react-typescript": "^7.0.0",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
@@ -22,6 +29,7 @@
     "@web-clipper/turndown": "^0.0.12",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",
+    "pre-commit": "^1.2.2",
     "prettier": "^1.18.2"
   }
 }
