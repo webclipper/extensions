@@ -1,0 +1,10 @@
+[
+  {
+    "manifest": {
+      "name": "手动选取",
+      "icon": "select",
+      "version": "0.0.1"
+    },
+    "type": "Text"
+  }
+]
