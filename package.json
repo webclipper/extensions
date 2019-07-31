@@ -8,8 +8,12 @@
   "scripts": {
     "dist": "tsc",
     "build": "yarn dist && node lib/build.js",
-    "lint": "eslint --ext .js,.ts,.tsx --ignore-pattern bad.* ."
+    "lint": "eslint --ext .js,.ts,.tsx --ignore-pattern bad.* .",
+    "prepublish": "npm run build"
   },
+  "files": [
+    "extensions/web-clipper"
+  ],
   "pre-commit": [
     "lint",
     "build"
