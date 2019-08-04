@@ -1,5 +1,6 @@
 import { codeCallWithContext } from './utils';
 import { SerializeAble, ExtensionType, IExtensionManifest, IExtensionLifeCycle } from './interface';
+export * from './interface';
 
 class AbstractExtension<T, U> implements SerializeAble {
   private readonly type: ExtensionType;

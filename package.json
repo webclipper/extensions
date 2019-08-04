@@ -1,7 +1,7 @@
 {
   "name": "@web-clipper/extensions",
   "version": "0.0.1",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": "git@github.com:webclipper/extensions.git",
   "author": "DiamondYuan <admin@diamondyuan.com>",
   "license": "MIT",
@@ -12,7 +12,8 @@
     "prepublish": "npm run build"
   },
   "files": [
-    "extensions/web-clipper"
+    "extensions/web-clipper",
+    "lib"
   ],
   "publishConfig": {
     "access": "public"
