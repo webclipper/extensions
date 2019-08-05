@@ -107,7 +107,7 @@ export interface IExtensionManifest {
   };
 }
 
-export const enum ExtensionType {
+export enum ExtensionType {
   Text = 'Text',
   Image = 'Image',
   Tool = 'tool',
