@@ -7,6 +7,7 @@ export interface InitContext {
     type?: string;
   };
   url?: string;
+  locale: string;
   pathname: string;
   currentImageHostingService?: {
     type: string;
@@ -15,6 +16,7 @@ export interface InitContext {
 
 export interface ContentScriptContext {
   $: JQueryStatic;
+  locale: string;
   turndown: TurndownService;
   Highlighter: Type<IHighlighter>;
   AreaSelector: Type<IAreaSelector>;
@@ -41,6 +43,7 @@ export interface ImageHostingService {
 }
 
 export interface ToolContext<T, Out> {
+  locale: string;
   result: T;
   data: Out;
   message: Message;
@@ -102,7 +105,7 @@ export interface IExtensionManifest {
       readonly name?: string;
       readonly description?: string;
       readonly icon?: string;
-      readonly keywords?: string;
+      readonly keywords?: string[];
     };
   };
 }
