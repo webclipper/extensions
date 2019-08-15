@@ -1,6 +1,6 @@
 {
   "name": "@web-clipper/extensions",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "lib/index.js",
   "repository": "git@github.com:webclipper/extensions.git",
   "author": "DiamondYuan <admin@diamondyuan.com>",
