@@ -47,7 +47,7 @@ export interface ToolContext<T, Out> {
   result: T;
   data: Out;
   message: Message;
-  imageService: ImageHostingService;
+  imageService?: ImageHostingService;
   loadImage: any;
   captureVisibleTab: any;
 }
