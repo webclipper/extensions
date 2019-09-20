@@ -1,0 +1,14 @@
+{
+  "name": "web-clipper-extensions",
+  "builds": [{ "src": "extensions/**/*", "use": "@now/static" }],
+  "routes": [
+    {
+      "src": "/extensions/(.*)",
+      "dest": "/extensions/$1.json"
+    },
+    {
+      "src": "/.*",
+      "status": 404
+    }
+  ]
+}

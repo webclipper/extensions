@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dist": "tsc",
-    "build": "yarn dist && node lib/build.js",
+    "build": "rimraf extensions && yarn dist && node lib/build.js",
     "lint": "eslint --ext .js,.ts,.tsx --ignore-pattern bad.* .",
     "prepublish": "npm run build"
   },
@@ -30,6 +30,7 @@
     "eslint": "^6.1.0",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.6.1",
+    "rimraf": "^3.0.0",
     "typescript": "^3.5.3"
   },
   "devDependencies": {
