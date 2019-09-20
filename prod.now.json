@@ -1,6 +1,6 @@
 {
   "name": "web-clipper-extensions",
-  "alias": ["extensions.dev.clipper.website"],
+  "alias": ["extensions.clipper.website"],
   "builds": [{ "src": "extensions/**/*", "use": "@now/static" }],
   "routes": [
     {
