@@ -1,7 +1,7 @@
 import globby from 'globby';
 import * as path from 'path';
 import * as fs from 'fs';
-import { SerializedExtension } from './interface';
+import { SerializedExtension, SerializedExtensionInfo } from './interface';
 
 (async () => {
   const extensionsDir = path.join(__dirname, './extensions');
@@ -12,7 +12,7 @@ import { SerializedExtension } from './interface';
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir);
   }
-  const extensionList: any = [];
+  const extensionList: SerializedExtensionInfo[] = [];
   extensions.forEach(f => {
     const extensionId = `${path.dirname(f)}/${path.basename(f).replace('.js', '')}`;
     const outPath = `${outputDir}/${extensionId}.json`;
