@@ -9,10 +9,9 @@
     "dist": "tsc",
     "build": "rimraf extensions && yarn dist && node lib/build.js",
     "lint": "eslint --ext .js,.ts,.tsx --ignore-pattern bad.* .",
-    "prepublish": "npm run build"
+    "prepublish": "npm run dist"
   },
   "files": [
-    "extensions/web-clipper",
     "lib"
   ],
   "publishConfig": {
