@@ -18,8 +18,7 @@
     "access": "public"
   },
   "pre-commit": [
-    "lint",
-    "build"
+    "lint"
   ],
   "dependencies": {
     "@diamondyuan/eslint-config-react-typescript": "^7.0.0",
