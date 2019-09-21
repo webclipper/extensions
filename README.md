@@ -1,1 +1,1 @@
-# extensions
+# Extensions for web clipper
