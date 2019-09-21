@@ -134,6 +134,8 @@ export interface SerializedExtensionWithId extends SerializedExtension {
   router: string;
 }
 
+export type SerializedExtensionInfo = Pick<SerializedExtensionWithId, 'type' | 'manifest' | 'id'>;
+
 interface Type<T> extends Function {
   new (...args: any[]): T;
 }
