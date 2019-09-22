@@ -1,7 +1,7 @@
 import { codeCallWithContext } from './utils';
 import { SerializeAble, ExtensionType, IExtensionManifest, IExtensionLifeCycle } from './interface';
 export * from './interface';
-
+export { getLocaleExtensionManifest } from './utils';
 class AbstractExtension<T, U> implements SerializeAble {
   private readonly type: ExtensionType;
   private readonly manifest: IExtensionManifest;
