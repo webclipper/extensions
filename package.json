@@ -13,7 +13,11 @@
     "test": "egg-bin cov **/*.test.ts --cov --ts "
   },
   "files": [
-    "lib"
+    "lib/*.js",
+    "lib/*.d.ts",
+    "!lib/*.test.js",
+    "!lib/*.test.d.ts",
+    "!lib/build*"
   ],
   "publishConfig": {
     "access": "public"
