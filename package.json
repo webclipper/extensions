@@ -10,7 +10,8 @@
     "build": "rimraf extensions && yarn dist && node lib/build.js",
     "lint": "eslint --ext .js,.ts,.tsx --ignore-pattern bad.* .",
     "prepublish": "npm run dist",
-    "test": "egg-bin cov **/*.test.ts --cov --ts "
+    "test": "egg-bin cov **/*.test.ts --cov --ts ",
+    "dev": "now dev"
   },
   "files": [
     "lib/*.js",
@@ -26,6 +27,10 @@
     "lint"
   ],
   "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-typescript": "^7.6.0",
     "@diamondyuan/eslint-config-react-typescript": "^7.0.0",
     "@types/jquery": "^3.3.30",
     "@types/mocha": "^5.2.7",
@@ -47,6 +52,6 @@
     "prettier": "^1.18.2",
     "react": "^16.8.6",
     "rimraf": "^3.0.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.6.3"
   }
 }

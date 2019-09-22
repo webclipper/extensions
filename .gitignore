@@ -1,5 +1,5 @@
 node_modules
 lib
 yarn-error.log
-extensions
+/extensions
 coverage
