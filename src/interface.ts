@@ -132,6 +132,7 @@ export interface SerializeAble {
 export interface SerializedExtensionWithId extends SerializedExtension {
   id: string;
   router: string;
+  embedded: boolean;
 }
 
 export type SerializedExtensionInfo = Pick<SerializedExtensionWithId, 'type' | 'manifest' | 'id'>;
