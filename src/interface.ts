@@ -42,6 +42,12 @@ export interface ImageHostingService {
   uploadImageUrl(url: string): Promise<string>;
 }
 
+interface CopyToClipboardOptions {
+  debug?: boolean;
+  message?: string;
+  format?: string; // MIME type
+}
+
 export interface ToolContext<T, Out> {
   locale: string;
   result: T;
@@ -50,6 +56,7 @@ export interface ToolContext<T, Out> {
   imageService?: ImageHostingService;
   loadImage: any;
   captureVisibleTab: any;
+  copyToClipboard: (text: string, options?: CopyToClipboardOptions) => void;
 }
 
 export interface IExtensionLifeCycle<T, U> {

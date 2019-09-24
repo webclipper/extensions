@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dist": "tsc",
-    "build": "rimraf extensions && yarn dist && node lib/build.js",
+    "build": "rimraf extensions && rimraf lib && yarn dist && node lib/build.js",
     "lint": "eslint --ext .js,.ts,.tsx --ignore-pattern bad.* .",
     "prepublish": "npm run dist",
     "test": "egg-bin cov **/*.test.ts --cov --ts ",
