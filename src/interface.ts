@@ -102,6 +102,8 @@ export interface IExtensionManifest {
    * 匹配的网址列表，如果为空，则匹配全部网站。
    */
   readonly matches?: string[];
+
+  readonly apiVersion?: string;
   /**
    * 关键字
    */
