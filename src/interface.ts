@@ -57,7 +57,7 @@ export interface ToolContext<T, Out> {
   loadImage: any;
   captureVisibleTab: any;
   copyToClipboard: (text: string, options?: CopyToClipboardOptions) => void;
-  createAndDownloadFile: (fileName: string, content: string) => void;
+  createAndDownloadFile: (fileName: string, content: string | Blob) => void;
 }
 
 export interface IExtensionLifeCycle<T, U> {
