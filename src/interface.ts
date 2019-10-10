@@ -1,6 +1,8 @@
 import TurndownService from 'turndown';
 import { IHighlighter } from '@web-clipper/highlight';
 import { IAreaSelector } from '@web-clipper/area-selector';
+import * as antd from 'antd';
+import React from 'react';
 
 export interface InitContext {
   accountInfo: {
@@ -58,6 +60,8 @@ export interface ToolContext<T, Out> {
   captureVisibleTab: any;
   copyToClipboard: (text: string, options?: CopyToClipboardOptions) => void;
   createAndDownloadFile: (fileName: string, content: string | Blob) => void;
+  antd: typeof antd;
+  React: typeof React;
 }
 
 export interface IExtensionLifeCycle<T, U> {
