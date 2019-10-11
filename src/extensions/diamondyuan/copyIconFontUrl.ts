@@ -4,7 +4,7 @@ export default new ToolExtension(
   {
     name: 'Copy Iconfont Url',
     icon: 'iconfont',
-    version: '0.0.1',
+    version: '0.0.2',
     description: 'Copy Iconfont Url in project page.',
     matches: ['https://www.iconfont.cn/manage/index'],
     i18nManifest: {
@@ -17,10 +17,7 @@ export default new ToolExtension(
   {
     run: () => {
       const element = document.querySelector('#J_cdn_type_svgsymbol');
-      if (element) {
-        return element.textContent;
-      }
-      return null;
+      return element ? element.textContent : null;
     },
     afterRun: ({ copyToClipboard, data, result, message }) => {
       if (!result) {
