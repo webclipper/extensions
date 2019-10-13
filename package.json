@@ -11,7 +11,7 @@
     "lint": "eslint --ext .js,.ts,.tsx --ignore-pattern bad.* .",
     "prepublish": "npm run dist",
     "test": "egg-bin cov **/*.test.ts --cov --ts ",
-    "start": "yarn build && yarn dev"
+    "start": "yarn build && now dev"
   },
   "files": [
     "lib/*.js",
