@@ -5,6 +5,7 @@ export default new ToolExtension(
     name: 'Link',
     icon: 'link',
     version: '0.0.2',
+    automatic: true,
     description: 'Add link at the end of the document.',
     i18nManifest: {
       'zh-CN': {

@@ -114,6 +114,8 @@ export interface IExtensionManifest {
    */
   readonly keywords?: string[];
 
+  readonly automatic?: boolean;
+
   readonly i18nManifest?: {
     [key: string]: {
       readonly name?: string;
