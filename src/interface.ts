@@ -60,6 +60,7 @@ export interface ToolContext<T, Out> {
   captureVisibleTab: any;
   copyToClipboard: (text: string, options?: CopyToClipboardOptions) => void;
   createAndDownloadFile: (fileName: string, content: string | Blob) => void;
+  pangu: (content: string) => Promise<string>;
   antd: typeof antd;
   React: typeof React;
 }
