@@ -50,6 +50,10 @@ interface CopyToClipboardOptions {
   format?: string; // MIME type
 }
 
+interface OCRRequest {
+  image: string;
+  language_type: 'CHN_ENG' | 'ENG' | 'JAP' | 'GER';
+}
 export interface ToolContext<T, Out> {
   locale: string;
   result: T;
@@ -61,6 +65,7 @@ export interface ToolContext<T, Out> {
   copyToClipboard: (text: string, options?: CopyToClipboardOptions) => void;
   createAndDownloadFile: (fileName: string, content: string | Blob) => void;
   pangu: (content: string) => Promise<string>;
+  ocr: (request: OCRRequest) => Promise<string>;
   antd: typeof antd;
   React: typeof React;
 }
