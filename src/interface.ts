@@ -93,31 +93,20 @@ export interface IExtensionLifeCycle<T, U> {
 }
 
 export interface IExtensionManifest {
-  /**
-   * 扩展名名
-   */
   readonly name: string;
-  /**
-   * 版本号 a.b.c
-   */
+
   readonly version: string;
-  /**
-   * 描述
-   */
+
   readonly description?: string;
-  /**
-   * 图标地址
-   */
+
   readonly icon?: string;
-  /**
-   * 匹配的网址列表，如果为空，则匹配全部网站。
-   */
+
   readonly matches?: string[];
 
   readonly apiVersion?: string;
-  /**
-   * 关键字
-   */
+
+  readonly powerpack?: boolean;
+
   readonly keywords?: string[];
 
   readonly automatic?: boolean;
