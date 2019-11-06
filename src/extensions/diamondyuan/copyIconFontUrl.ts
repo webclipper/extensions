@@ -5,6 +5,7 @@ export default new ToolExtension(
     name: 'Copy Iconfont Url',
     icon: 'iconfont',
     version: '0.0.2',
+    powerpack: true,
     description: 'Copy Iconfont Url in project page.',
     matches: ['https://www.iconfont.cn/manage/index'],
     i18nManifest: {
