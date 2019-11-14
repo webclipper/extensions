@@ -4,8 +4,8 @@ import { SelectAreaPosition } from '@web-clipper/area-selector';
 export default new TextExtension<SelectAreaPosition>(
   {
     name: 'OCR',
-    icon: 'picture',
-    version: '0.0.2',
+    icon: 'ocr',
+    version: '0.0.3',
     apiVersion: '1.13.0',
     powerpack: true,
     i18nManifest: {
