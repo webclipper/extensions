@@ -5,7 +5,8 @@ export default new ToolExtension<SelectAreaPosition>(
   {
     name: 'Pangu',
     icon: 'pangu',
-    version: '0.0.1',
+    version: '0.0.2',
+    automatic: true,
     apiVersion: '1.13.0',
     description: 'Paranoid text spacing in JavaScript',
     powerpack: false,
