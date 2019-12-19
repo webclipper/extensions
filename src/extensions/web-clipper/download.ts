@@ -4,7 +4,7 @@ export default new ToolExtension(
   {
     name: 'Save as Markdown',
     icon: 'file-markdown',
-    version: '0.0.1',
+    version: '0.0.2',
     description: 'Save as Markdown and Download.',
     apiVersion: '1.12.0',
     i18nManifest: {
@@ -15,6 +15,9 @@ export default new ToolExtension(
     },
   },
   {
+    init: ({ pathname }) => {
+      return pathname.startsWith('/plugin');
+    },
     run: ({ document }) => {
       return document.title;
     },
