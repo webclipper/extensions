@@ -978,10 +978,10 @@
   dependencies:
     jquery "^3.4.1"
 
-"@web-clipper/turndown@^0.0.12":
-  version "0.0.12"
-  resolved "https://registry.npm.taobao.org/@web-clipper/turndown/download/@web-clipper/turndown-0.0.12.tgz#b68bb11cc305266e416371d075a92777fdabfe45"
-  integrity sha1-touxHMMFJm5BY3HQdaknd/2r/kU=
+"@web-clipper/turndown@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@web-clipper/turndown/-/turndown-0.1.2.tgz#ebcd26e677fd31772b000c41fdeddab48935359d"
+  integrity sha512-Auc7avaHcNuOHe4fzSPXxSAH16MVjRBLQqZDyv1Po6d25EM0fBpytXq9FpCW33y8WIPP8nE+nga4GzgtGrXyYA==
   dependencies:
     "@types/mz" "^0.0.32"
     "@types/turndown" "^5.0.0"
