@@ -4,12 +4,12 @@ export default new ToolExtension(
   {
     name: 'Douban Cover',
     icon: 'douban',
-    version: '0.0.8',
+    version: '0.0.9',
     matches: ['https://movie.douban.com/subject/*'],
     i18nManifest: {
       'zh-CN': {
         name: '豆瓣封面',
-        description: '下载豆瓣电影的蜂蜜',
+        description: '下载豆瓣电影的封面',
       },
     },
   },
